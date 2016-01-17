@@ -8,12 +8,6 @@ import (
 	"github.com/ChimeraCoder/anaconda"
 )
 
-// LoginTemp contains data to be embeded to login template.
-type LoginTemp struct {
-	AuthURL string
-	Text    string
-}
-
 func loginHandler(w http.ResponseWriter, r *http.Request) {
 	// ここらへんでTwitter認証開始、リクエストトークン情報をsessionへ
 
