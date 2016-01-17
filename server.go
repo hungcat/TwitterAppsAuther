@@ -27,5 +27,5 @@ func (a *GoApp) RegisterHandlers() {
 	a.mux.HandleFunc("/", homeHandler)
 	a.mux.HandleFunc("/login", loginHandler)
 	a.mux.HandleFunc("/logout", logoutHandler)
-	a.mux.HandleFunc("/afterlogin", afterloginHandler)
+	a.mux.HandleFunc("/callback", callbackHandler)
 }

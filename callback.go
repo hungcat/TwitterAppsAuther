@@ -9,7 +9,7 @@ import (
 	"github.com/garyburd/go-oauth/oauth"
 )
 
-func afterloginHandler(w http.ResponseWriter, r *http.Request) {
+func callbackHandler(w http.ResponseWriter, r *http.Request) {
 	session, _ := store.Get(r, sessionName)
 	//fmt.Println(session.Values)
 
