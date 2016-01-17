@@ -1,2 +1,3 @@
 # TwitterAuthApp
 TwitterのOAuth認可機構のミニマム
+使うときはappconf.jsonにコンシューマー情報を
