@@ -5,7 +5,5 @@ import (
 )
 
 func main() {
-	goapp := NewGoApp()
-	goapp.RegisterHandlers()
-	log.Fatal(goapp.ListenAndServe(":8080"))
+	log.Fatal(NewGoApp().ListenAndServe(":8080"))
 }

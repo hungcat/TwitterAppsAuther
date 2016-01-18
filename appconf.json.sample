@@ -1,1 +1,1 @@
-{"key": "hoge", "secret": "fuga"}
+{"consumer_key": "hoge", "consumer_secret": "fuga", "cookie_secret": "piyo"}

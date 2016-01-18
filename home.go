@@ -13,7 +13,7 @@ type HomeTemp struct {
 	ButtonURL string
 }
 
-func homeHandler(w http.ResponseWriter, r *http.Request) {
+func (app *GoApp) homeHandler(w http.ResponseWriter, r *http.Request) {
 	t, err := template.ParseFiles("home.html")
 	if err != nil {
 		fmt.Fprintf(w, "Under construction.")
@@ -21,8 +21,7 @@ func homeHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	var hTemp HomeTemp
-	session, _ := store.Get(r, sessionName)
-	//fmt.Println(session.Values)
+	session, _ := app.store.Get(r, sessionName)
 
 	if _, ok := session.Values["user_id"]; ok {
 		hTemp = HomeTemp{
